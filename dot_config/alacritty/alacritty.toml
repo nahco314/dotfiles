@@ -1,0 +1,16 @@
+[window]
+padding = { x = 5, y = 5 }
+dimensions = { columns = 120, lines = 30 }
+
+[font]
+normal = { family = "JetBrains Mono Nerd Font Mono", style = "Regular" }
+size = 11.25
+# offset = { x = 0, y = 1 }
+
+[colors.primary]
+foreground = "#A9B7C6"
+background = "#1E1F22"
+
+[colors]
+cursor = { cursor = "#BBBBBB" }
+

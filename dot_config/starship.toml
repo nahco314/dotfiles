@@ -1,0 +1,168 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](fg:color_0)\
+$os\
+$username\
+$hostname\
+[](bg:color_1 fg:color_0)\
+$directory\
+[](fg:color_1 bg:color_2)\
+$git_branch\
+$git_status\
+[](fg:color_2 bg:color_3)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:color_3 bg:color_4)\
+$time\
+[](fg:color_4)\
+$character"""
+
+palette = 'gruvbox_dark'
+
+[palettes.gruvbox_dark]
+color_text = '#A9B7C6'
+color_0 = '#0D1221'
+color_1 = '#141D33'
+color_2 = '#1C2333'
+color_3 = '#262A33'
+color_4 = '#455276'
+color_5 = '#3c3836'
+color_green = '#98971a'
+color_purple = '#b16286'
+color_red = '#cc241d'
+
+color_ssh = '#FF0000'
+
+[hostname]
+disabled = false
+ssh_only = true
+format = '[](bg:color_0 fg:color_ssh)[](bg:color_ssh fg:color_0)[on $hostname](bg:color_ssh)[](bg:color_ssh fg:color_0)[](bg:color_0 fg:color_ssh)'
+
+[os]
+disabled = true
+style = "bg:color_0 fg:color_text"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:color_0 fg:color_text"
+style_root = "bg:color_0 fg:color_text"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:color_text bg:color_1"
+format = "[ $path ]($style)"
+truncation_length = -1
+truncation_symbol = "…/"
+
+# [directory.substitutions]
+# "Documents" = "󰈙 "
+# "Downloads" = " "
+# "Music" = "󰝚 "
+# "Pictures" = " "
+# "Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:color_2"
+format = '[[ $symbol $branch ](fg:color_text bg:color_2)]($style)'
+
+[git_status]
+disabled = true
+style = "bg:color_2"
+format = '[[($all_status$ahead_behind )](fg:color_text bg:color_2)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color_3"
+format = '[[ $symbol( $version) ](fg:color_text bg:color_3)]($style)'
+
+[c]
+symbol = " "
+style = "bg:color_3"
+format = '[[ $symbol( $version) ](fg:color_text bg:color_3)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color_3"
+format = '[[ $symbol( $version) ](fg:color_text bg:color_3)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:color_3"
+format = '[[ $symbol( $version) ](fg:color_text bg:color_3)]($style)'
+
+[php]
+symbol = ""
+style = "bg:color_3"
+format = '[[ $symbol( $version) ](fg:color_text bg:color_3)]($style)'
+
+[java]
+symbol = " "
+style = "bg:color_3"
+format = '[[ $symbol( $version) ](fg:color_text bg:color_3)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:color_3"
+format = '[[ $symbol( $version) ](fg:color_text bg:color_3)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:color_3"
+format = '[[ $symbol( $version) ](fg:color_text bg:color_3)]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_3"
+format = '[[ $symbol( $version) ](fg:color_text bg:color_3)]($style)'
+detect_extensions = []
+
+[time]
+disabled = true
+time_format = "%R"
+style = "bg:color_4"
+format = '[[  $time ](fg:color_text bg:color_4)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = ''
+error_symbol = ''
+# success_symbol = '[->](bold fg:color_green)'
+# error_symbol = '[->](bold fg:color_red)'
+# vimcmd_symbol = '[<-](bold fg:color_green)'
+# vimcmd_replace_one_symbol = '[<-](bold fg:color_purple)'
+# vimcmd_replace_symbol = '[<-](bold fg:color_purple)'
+# vimcmd_visual_symbol = '[<-](bold fg:color_1)'
