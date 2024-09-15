@@ -2,11 +2,11 @@
 
 format = """
 [](fg:color_0)\
+$directory\
+[](bg:color_1 fg:color_0)\
 $os\
 $username\
 $hostname\
-[](bg:color_1 fg:color_0)\
-$directory\
 [](fg:color_1 bg:color_2)\
 $git_branch\
 $git_status\
@@ -41,14 +41,20 @@ color_red = '#cc241d'
 
 color_ssh = '#FF0000'
 
+[directory]
+style = "fg:color_text bg:color_0"
+format = "[ $path ]($style)"
+truncation_length = -1
+truncation_symbol = "…/"
+
 [hostname]
 disabled = false
 ssh_only = true
-format = '[](bg:color_0 fg:color_ssh)[](bg:color_ssh fg:color_0)[on $hostname](bg:color_ssh)[](bg:color_ssh fg:color_0)[](bg:color_0 fg:color_ssh)'
+format = '[](bg:color_1 fg:color_ssh)[](bg:color_ssh fg:color_1)[on $hostname](bg:color_ssh)[](bg:color_ssh fg:color_1)[](bg:color_1 fg:color_ssh)'
 
 [os]
 disabled = true
-style = "bg:color_0 fg:color_text"
+style = "bg:color_1 fg:color_text"
 
 [os.symbols]
 Windows = "󰍲"
@@ -74,15 +80,9 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "bg:color_0 fg:color_text"
-style_root = "bg:color_0 fg:color_text"
+style_user = "bg:color_1 fg:color_text"
+style_root = "bg:color_1 fg:color_text"
 format = '[ $user ]($style)'
-
-[directory]
-style = "fg:color_text bg:color_1"
-format = "[ $path ]($style)"
-truncation_length = -1
-truncation_symbol = "…/"
 
 # [directory.substitutions]
 # "Documents" = "󰈙 "
