@@ -42,7 +42,7 @@ color_red = '#cc241d'
 color_ssh = '#FF0000'
 
 [directory]
-style = "fg:color_text bg:color_0"
+style = "fg:color_text bg:color_0 bold"
 format = "[ $path ]($style)"
 truncation_length = -1
 truncation_symbol = "…/"
