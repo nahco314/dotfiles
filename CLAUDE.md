@@ -6,7 +6,7 @@ A coding agent reading this file can understand the full picture of the machine 
 ## Repository Structure
 
 ```
-~/.local/share/chezmoi/   (= this repository)
+~/dotfiles/   (= this repository)
 ├── CLAUDE.md                      # this file
 ├── dot_config/
 │   ├── fish/                      # Fish shell config
@@ -76,7 +76,7 @@ chezmoi re-add ~/.config/mise/config.toml
 ### 3. Detect new binaries and update manifests
 
 ```bash
-bash ~/.local/share/chezmoi/scripts/detect-new-commands.sh
+bash ~/dotfiles/scripts/detect-new-commands.sh
 ```
 
 Read the generated report and append each new command to the appropriate manifest:
@@ -88,7 +88,7 @@ Read the generated report and append each new command to the appropriate manifes
 ### 4. git commit & push
 
 ```bash
-cd ~/.local/share/chezmoi
+cd ~/dotfiles
 git add -A
 git commit -m "sync: <summary of changes>"
 git push
@@ -98,7 +98,7 @@ git push
 
 ```bash
 chezmoi add ~/.config/<new-file>
-cd ~/.local/share/chezmoi && git add . && git commit -m "add: <file>"
+cd ~/dotfiles && git add . && git commit -m "add: <file>"
 ```
 
 ## Notes
