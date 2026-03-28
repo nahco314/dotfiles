@@ -1,0 +1,28 @@
+# cargo install で管理するツール一覧
+# 形式: cargo install <args>
+# sync 時に Claude Code がこのファイルを更新する
+
+cargo install --locked hyperfine
+cargo install alacritty
+cargo install bat
+cargo install cargo-bloat
+cargo install cargo-deps
+cargo install cargo-edit
+cargo install cargo-llvm-cov
+cargo install cargo-modules
+cargo install cargo-typify
+cargo install cargo-update
+cargo install cargo-wasix
+cargo install eza
+cargo install mdbook
+cargo install mdbook-toc
+cargo install mise
+cargo install omnibor-cli --locked
+cargo install pahcer
+cargo install rumdl
+cargo install tokei
+cargo install wasm-pack
+cargo install wasm-bindgen-cli
+cargo install --git https://github.com/nahco314/cb cb
+cargo install --git https://github.com/tombi-toml/tombi tombi-cli
+cargo install --git https://github.com/nahco314/simple-key-monitor

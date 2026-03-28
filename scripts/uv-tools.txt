@@ -1,0 +1,17 @@
+# uv tool install で管理するツール一覧
+# 形式: uv tool install <package>
+# sync 時に Claude Code がこのファイルを更新する
+
+uv tool install aws-sam-cli
+uv tool install dll-pack-builder
+uv tool install feed-llm
+uv tool install "git+https://github.com/scottkirkwood/key-mon" --with python3-xlib --with PyGObject
+uv tool install maturin
+uv tool install my-cc-hook
+uv tool install mypy
+uv tool install page-dewarp
+uv tool install poetry2rye
+uv tool install pyright
+uv tool install ruff
+uv tool install ty
+uv tool install watchdog

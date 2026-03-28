@@ -1,0 +1,11 @@
+# bun install -g で管理するパッケージ一覧
+# 形式: パッケージ名のみ（bun install -g <package>）
+# sync 時に Claude Code がこのファイルを更新する
+
+@anthropic-ai/claude-code
+@google/gemini-cli
+@openai/codex
+ccusage
+generator-code
+wrangler
+yo

@@ -1,0 +1,11 @@
+[tools]
+"npm:firebase-tools" = "latest"
+"npm:foreman" = "latest"
+"npm:local-ssl-proxy" = "latest"
+zig = "master"
+bun = "latest"
+go = "latest"
+node = "24"
+
+[settings]
+experimental = true
