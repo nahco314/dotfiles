@@ -99,6 +99,16 @@ chezmoi add ~/.config/<new-file>
 cd ~/dotfiles && git add . && git commit -m "add: <file>"
 ```
 
+## Task Scope
+
+Any task involving machine settings, configuration changes, or tool installation in this repository **implicitly includes reflecting those changes in chezmoi and committing to git**. A task is not complete until:
+
+1. The actual file under `~/.config/` (or wherever) is updated
+2. `chezmoi re-add <file>` is run to sync to the dotfiles source
+3. The change is committed to this git repository
+
+Never edit only the chezmoi source (`~/dotfiles/`) directly — always edit the real file first, then re-add.
+
 ## Notes
 
 - Manifests under `scripts/` are **records of what the user actually installed**, not reproduction scripts. The intent matters more than exact reproducibility.
