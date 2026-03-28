@@ -42,8 +42,6 @@ A coding agent reading this file can understand the full picture of the machine 
 | JS global packages | bun install -g | `scripts/bun-packages.txt` |
 | Rust toolchain | rustup | (outside chezmoi, auto-installed) |
 | System packages | apt | (outside chezmoi) |
-| CUDA / HPC SDK | manual | /usr/local/cuda, /opt/nvidia |
-| Emscripten SDK | manual | ~/emsdk |
 
 ## Machine Environment
 
