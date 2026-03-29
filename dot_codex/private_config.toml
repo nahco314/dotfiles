@@ -1,0 +1,52 @@
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+personality = "pragmatic"
+service_tier = "fast"
+[projects."/home/nahco314/WebstormProjects/code-practice"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/RustroverProjects/foro"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/PycharmProjects/gakupuri_chatbot"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/PycharmProjects/ankinize"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/PycharmProjects/ch-anki"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/PycharmProjects/anki-kobun"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/CLionProjects/project"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/PycharmProjects/bc-tools"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/PycharmProjects/bc"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/PycharmProjects/cbc-tools"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/RustroverProjects/foro-rustfmt"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/RustroverProjects/foro-ruff"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/RustroverProjects/foro-tombi"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/IdeaProjects/foro-intellij-plugin"]
+trust_level = "trusted"
+
+[projects."/home/nahco314/PycharmProjects/soniox-pg"]
+trust_level = "trusted"
+
+[notice.model_migrations]
+gpt-5-codex = "gpt-5.3-codex"
+"gpt-5.3-codex" = "gpt-5.4"

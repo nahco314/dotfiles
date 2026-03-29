@@ -8,6 +8,16 @@ A coding agent reading this file can understand the full picture of the machine 
 ```
 ~/dotfiles/   (= this repository)
 ├── CLAUDE.md                      # this file
+├── dot_claude/                    # Claude Code global config (~/.claude/)
+│   ├── CLAUDE.md                  # global instructions
+│   ├── RTK.md                     # RTK instructions
+│   ├── private_settings.json      # settings (hooks, plugins, permissions)
+│   └── hooks/
+│       └── executable_rtk-rewrite.sh  # PreToolUse hook for rtk
+├── dot_codex/                     # OpenAI Codex CLI config (~/.codex/)
+│   ├── private_AGENTS.md          # global instructions
+│   ├── private_config.toml        # model, personality settings
+│   └── config.json                # model override (usually empty)
 ├── dot_config/
 │   ├── fish/                      # Fish shell config
 │   │   ├── config.fish            # main config (starship/atuin/mise init)
