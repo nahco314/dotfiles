@@ -19,6 +19,7 @@ cargo install mdbook-toc
 cargo install mise
 cargo install omnibor-cli --locked
 cargo install pahcer
+cargo install rtk
 cargo install rumdl
 cargo install tokei
 cargo install wasm-pack
