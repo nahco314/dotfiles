@@ -8,7 +8,7 @@ if status is-interactive
     # Auto-create tmux session (skip if already inside tmux, e.g. SSH from tmux)
     if not set -q TMUX
         and not set -q SSH_CONNECTION
-        tmux new-session -A -s (hostname)--(date +%H%M%S)
+        tmux new-session -A -s (hostname)--(date +%H%M%S) \; set-option status off
     end
 end
 set -x EMSDK_PYTHON /home/nahco314/.local/share/uv/python/cpython-3.12.5-linux-x86_64-gnu/bin/python3
