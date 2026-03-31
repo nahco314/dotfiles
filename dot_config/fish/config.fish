@@ -5,8 +5,9 @@ if status is-interactive
     alias cat bat
     alias ls eza
 
-    # Auto-create tmux session
+    # Auto-create tmux session (skip if already inside tmux, e.g. SSH from tmux)
     if not set -q TMUX
+        and not set -q SSH_TTY
         tmux new-session -A -s (hostname)--(date +%H%M%S)
     end
 end
