@@ -3,3 +3,4 @@ background = "1E1F22"
 font-size = 11.25
 cursor-style = "block"
 shell-integration-features = "no-cursor"
+term = "xterm-ghostty"
