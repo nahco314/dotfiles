@@ -4,13 +4,24 @@ if status is-interactive
     atuin init fish --disable-up-arrow | source
     alias cat bat
     alias ls eza
+
+    # Auto-create tmux session
+    if not set -q TMUX
+        tmux new-session -A -s (hostname)--(date +%H%M%S)
+    end
 end
 set -x EMSDK_PYTHON /home/nahco314/.local/share/uv/python/cpython-3.12.5-linux-x86_64-gnu/bin/python3
 set -x EMSDK_QUIET 1
 source "/home/nahco314/emsdk/emsdk_env.fish"
 set -e __MISE_DIFF
 set -e __MISE_SESSION
-~/.local/bin/mise activate fish | source
+~/.local/bin/mise activate fish --no-hook-env | source
+if status is-interactive
+    ~/.local/bin/mise hook-env -s fish | source
+    function __mise_on_pwd --on-variable PWD --description 'Update mise on directory changes, including cd . reloads'
+        ~/.local/bin/mise hook-env -s fish | source
+    end
+end
 set -x EMSDK_PYTHON /home/nahco314/.local/share/uv/python/cpython-3.12.5-linux-x86_64-gnu/bin/python3
 
 set -x PATH /usr/local/cuda/bin $PATH

@@ -6,6 +6,7 @@ zig = "master"
 bun = "latest"
 go = "latest"
 node = "24"
+fzf = "latest"
 
 [settings]
 experimental = true
