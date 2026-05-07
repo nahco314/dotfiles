@@ -20,7 +20,7 @@ Codex has no mechanism to split these into separate files. This is a known upstr
 `modify_config.toml` is a chezmoi [modify script](https://www.chezmoi.io/reference/source-state-attributes/) that:
 
 - Emits the managed global settings (defined at the top of the script)
-- Reads the current deployed `config.toml` and preserves any `[projects.*]` and `[notice.*]` sections
+- Reads the current deployed `config.toml` and preserves any `[projects.*]`, `[plugins.*]`, and `[notice.*]` sections
 
 This means `chezmoi apply` updates the global settings without wiping Codex-managed trust entries.
 

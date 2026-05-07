@@ -2,7 +2,7 @@
 # chezmoi modify script for ~/.codex/config.toml
 #
 # Manages global settings while preserving machine-local sections
-# ([projects.*], [notice.*]) that Codex writes automatically.
+# ([projects.*], [plugins.*], [notice.*]) that Codex writes automatically.
 #
 # See dot_codex/README.md for background on why this is necessary.
 
@@ -11,10 +11,12 @@ import tomllib
 
 # --- Managed settings (edit here to change global Codex config) ---
 BASE = {
-    "model": "gpt-5.4",
-    "model_reasoning_effort": "high",
+    "model": "gpt-5.5",
+    "model_reasoning_effort": "medium",
     "personality": "pragmatic",
     "service_tier": "fast",
+    "approval_policy": "never",
+    "sandbox_mode": "workspace-write",
 }
 # -----------------------------------------------------------------
 
@@ -43,6 +45,12 @@ def main() -> None:
     # Preserve [projects."<path>"] sections written by Codex
     for path, settings in current.get("projects", {}).items():
         lines.append(f'\n[projects."{path}"]')
+        for sk, sv in settings.items():
+            lines.append(f"{sk} = {fmt(sv)}")
+
+    # Preserve [plugins."<name>"] sections written by Codex
+    for name, settings in current.get("plugins", {}).items():
+        lines.append(f'\n[plugins."{name}"]')
         for sk, sv in settings.items():
             lines.append(f"{sk} = {fmt(sv)}")
 
