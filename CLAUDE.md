@@ -11,9 +11,7 @@ A coding agent reading this file can understand the full picture of the machine 
 ├── dot_claude/                    # Claude Code global config (~/.claude/)
 │   ├── CLAUDE.md                  # global instructions
 │   ├── RTK.md                     # RTK instructions
-│   ├── private_settings.json      # settings (hooks, plugins, permissions)
-│   └── hooks/
-│       └── executable_rtk-rewrite.sh  # PreToolUse hook for rtk
+│   └── settings.json              # settings (hooks, plugins, permissions)
 ├── dot_codex/                     # OpenAI Codex CLI config (~/.codex/)
 │   ├── private_AGENTS.md          # global instructions
 │   ├── private_config.toml        # model, personality settings

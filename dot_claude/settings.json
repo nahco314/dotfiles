@@ -30,7 +30,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/home/nahco314/.claude/hooks/rtk-rewrite.sh"
+            "command": "rtk hook claude"
           }
         ]
       }
